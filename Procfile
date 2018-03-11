@@ -1,1 +1,1 @@
-web: node index.js
+public: node index.js
