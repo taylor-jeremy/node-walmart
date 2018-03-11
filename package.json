@@ -1,0 +1,27 @@
+{
+  "name": "postal-rate-calc",
+  "version": "1.0.0",
+  "description": "This calculates the stamp rates for USPS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "taylor-jeremy",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express": "^4.16.2"
+  },
+  "engines": {
+    "node": "4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taylor-jeremy/cs313-node"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
+}
