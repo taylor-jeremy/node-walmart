@@ -14,6 +14,10 @@ app.get('/stamp', function(request, response) {
 	handleStamp(request, response);
 });
 
+/*app.get('/', function(request, response) {
+    response.render('pages/index')
+});*/
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
@@ -32,27 +36,27 @@ function handleStamp(request, response) {
 }
 
 function calculateRate(response, size, weight) {
-	size = size.toLowerCase();
+	sz = size.toLowerCase();
 
 	var cost = 0;
 
-	if (size == "Letters (Stamped)") {
+	if (sz == "Letters (Stamped)") {
 		if (weight < 1) {
 			cost = 0.50;
 		}
-	} else if (op == "subtract") {
+	} /*else if (op == "subtract") {
 		result = left - right;		
 	} else if (op == "multiply") {
 		result = left * right;
 	} else if (op == "divide") {
 		result = left / right;
-	} else {
+	}*/ else {
 		// It would be best here to redirect to an "unknown operation"
 		// error page or something similar.
 	}
 
 	// Set up a JSON object of the values we want to pass along to the EJS result page
-	var params = {operation: op, left: left, right: right, result: result};
+	var params = {size: sz, weight: weight, cost: cost};
 
 	// Render the response, using the EJS page "result.ejs" in the pages directory
 	// Makes sure to pass it the parameters we need.
