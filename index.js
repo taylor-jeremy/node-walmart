@@ -41,7 +41,7 @@ function calculateRate(response, size, weight) {
 	var c = 0;
 	var cost = c.toFixed(2);
 
-	if (sz == "Letters (Stamped)") {
+	if (sz == "letters (stamped)") {
 		if (weight < 1) {
 			cost = 0.5;
 		}
