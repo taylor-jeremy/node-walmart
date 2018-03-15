@@ -42,7 +42,7 @@ function calculateRate(response, size, weight) {
 
 	if (sz == "letters (stamped)") {
 		if (weight < 1) {
-			cost = 0.50;
+			cost = Number(0.50).toFixed(2);
 		}
 	} /*else if (op == "subtract") {
 		result = left - right;		
