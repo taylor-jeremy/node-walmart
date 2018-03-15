@@ -58,8 +58,8 @@ function calculateRate(response, size, weight) {
 	// Set up a JSON object of the values we want to pass along to the EJS result page
 	var params = {size: sz, weight: weight, cost: cost};
 
-	// Render the response, using the EJS page "result.ejs" in the pages directory
+	// Render the response, using the EJS page "getRate.ejs" in the pages directory
 	// Makes sure to pass it the parameters we need.
-	response.render('pages/result', params);
+	response.render('pages/getRate', params);
 
 }
