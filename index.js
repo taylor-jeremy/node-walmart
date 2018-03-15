@@ -14,9 +14,9 @@ app.get('/stamp', function(request, response) {
 	handleStamp(request, response);
 });
 
-/*app.get('/', function(request, response) {
+app.get('/', function(request, response) {
     response.render('pages/index')
-});*/
+});
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
@@ -41,19 +41,52 @@ function calculateRate(response, size, weight) {
 	var cost;
 
 	if (sz == "letters (stamped)") {
-		if (weight < 1) {
-			cost = Number(0.50).toFixed(2);
-		} else if (weight < 2) {
-			cost = Number(0.50 + (weight % 1 - 1) * 0.21).toFixed(2);
-	} /*else if (op == "subtract") {
-		result = left - right;		
-	} else if (op == "multiply") {
-		result = left * right;
-	} else if (op == "divide") {
-		result = left / right;
-	}*/ else {
+		if (weight > 0 && weight < 3.5) {
+			cost = Number(0.50 + (Math.trunc(weight) * 0.21)).toFixed(2);
+		}
+		else {
+			console.log("Please enter a valid weight that is between 0 and 3.5 oz");
+		}
+	} else if (sz == "letters (metered)") {
+		if (weight > 0 && weight < 3.5) {
+			cost = Number(0.47 + (Math.trunc(weight) * 0.21)).toFixed(2);
+		}
+		else {
+			console.log("Please enter a valid weight that is between 0 and 3.5 oz");
+		}
+	} else if (sz == "large envelopes (flats)") {
+		if (weight > 0 && weight < 13) {
+			cost = Number(1.00 + (Math.trunc(weight) * 0.21)).toFixed(2);
+		}
+		else {
+			console.log("Please enter a valid weight that is between 0 and 13 oz");
+		}
+	} else if (sz == "first-class package service—retail") {
+		if (weight > 0 && weight < 4) {
+			cost = Number(3.50).toFixed(2);
+		} else if (weight < 8) {
+			cost = Number(3.75).toFixed(2);
+		} else if (weight < 9) {
+			cost = Number(4.10).toFixed(2);
+		} else if (weight < 10) {
+			cost = Number(4.45).toFixed(2);
+		} else if (weight < 11) {
+			cost = Number(4.80).toFixed(2);
+		} else if (weight < 12) {
+			cost = Number(5.15).toFixed(2);
+		} else if (weight < 13) {
+			cost = Number(5.50).toFixed(2);
+		}
+		else {
+			console.log("Please enter a valid weight that is between 0 and 13 oz");
+		}
+	} else {
 		// It would be best here to redirect to an "unknown operation"
 		// error page or something similar.
+		//The 404 Route
+		app.get('*', function(req, res){
+		response.send('invalid package type', 404);
+});
 	}
 
 	// Set up a JSON object of the values we want to pass along to the EJS result page

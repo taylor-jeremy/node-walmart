@@ -6,7 +6,9 @@
 <body>
 	<h1>Postal Rate Calculator</h1>
 	<form action="/stamp" method="get">
-		<input type="text" name="item_weight">
+		<label for="item_weight">Weight (oz.)</label>
+		<input type="text" name="item_weight"><br />
+		<label for="size">Package Type</label>
 		<select name="size">
 			<option>Letters (Stamped)</option>
 			<option>Letters (Metered)</option>
