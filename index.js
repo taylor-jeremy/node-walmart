@@ -38,11 +38,12 @@ function handleStamp(request, response) {
 function calculateRate(response, size, weight) {
 	sz = size.toLowerCase();
 
-	var cost = 0;
+	var c = 0;
+	var cost = num.toFixed(2);
 
 	if (sz == "Letters (Stamped)") {
 		if (weight < 1) {
-			cost = 0.50;
+			cost = 0.5;
 		}
 	} /*else if (op == "subtract") {
 		result = left - right;		
