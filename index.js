@@ -44,7 +44,7 @@ function calculateRate(response, size, weight) {
 		if (weight < 1) {
 			cost = Number(0.50).toFixed(2);
 		} else if (weight < 2) {
-			cost = Number(0.50).toFixed(2) + (weight % 1 - 1) * 0.21;
+			cost = Number(0.50 + (weight % 1 - 1) * 0.21).toFixed(2);
 	} /*else if (op == "subtract") {
 		result = left - right;		
 	} else if (op == "multiply") {
