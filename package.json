@@ -1,33 +1,23 @@
 {
-  "name": "node-walmart",
+  "name": "walmart",
   "version": "1.0.0",
-  "description": "This displays information with Walmart web services",
+  "description": "walmart web services",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "taylor-jeremy",
-  "license": "MIT",
   "dependencies": {
-    "ejs": "2.4.1",
-    "express": "4.16.3"
+    "express": "^4.16.3"
   },
-  "engines": {
-    "node": "8.10.0",
-    "npm": "5.7.1"
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taylor-jeremy/node-walmart"
+    "url": "git+https://github.com/taylor-jeremy/node-walmart.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
+  "author": "taylor-jeremy",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/taylor-jeremy/node-walmart/issues"
   },
-  "homepage": "https://github.com/taylor-jeremy/node-walmart#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/taylor-jeremy/node-walmart#readme"
 }
