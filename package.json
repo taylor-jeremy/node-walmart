@@ -1,5 +1,5 @@
 {
-  "name": "walmart",
+  "name": "node-walmart",
   "version": "1.0.0",
   "description": "walmart web services",
   "main": "index.js",
