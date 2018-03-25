@@ -10,8 +10,8 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/stamp', function(request, response) {
-	handleStamp(request, response);
+app.get('/id', function(request, response) {
+	handleId(request, response);
 });
 
 app.get('/', function(request, response) {
@@ -22,14 +22,14 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-function handleStamp(request, response) {
+function handleId(request, response) {
 	var requestUrl = url.parse(request.url, true);
 
 	console.log("Query parameters: " + JSON.stringify(requestUrl.query));
 
 	// TODO: Here we should check to make sure we have all the correct parameters
 
-	var size = requestUrl.query.size;
+	/*var size = requestUrl.query.size;
 	var item_weight = Number(requestUrl.query.item_weight);
 
 	calculateRate(response, size, item_weight);
@@ -86,7 +86,7 @@ function calculateRate(response, size, weight) {
 		//The 404 Route
 		app.get('*', function(req, res){
 		response.send('invalid package type', 404);
-});
+});*/
 	}
 
 	// Set up a JSON object of the values we want to pass along to the EJS result page
