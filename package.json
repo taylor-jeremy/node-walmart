@@ -4,7 +4,8 @@
   "description": "walmart web services",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "ejs": "*"
   },
   "devDependencies": {},
   "scripts": {
