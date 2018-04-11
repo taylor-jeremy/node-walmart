@@ -1,6 +1,6 @@
 function getOnLoad() {
     $.ajax({
-         url: "http://api.walmartlabs.com/v1/trends",
+         url: "//api.walmartlabs.com/v1/trends",
          data: {apikey: 'gz84agu8t2bvg5whfc48zbtk'},
          dataType: "json",
          success: function(data){
@@ -27,7 +27,7 @@ function getOnLoad() {
    //document.getElementById('searchText').value = ' ';
    // https://forums.asp.net/t/1934215.aspx?Using+jQuery+ajax+to+call+asmx+webservice+methods
    $.ajax({
-      url: "http://api.walmartlabs.com/v1/trends?format=json&apiKey=gz84agu8t2bvg5whfc48zbtk",
+      url: "//api.walmartlabs.com/v1/trends?format=json&apiKey=gz84agu8t2bvg5whfc48zbtk",
       data: {apikey: 'gz84agu8t2bvg5whfc48zbtk', i: id},
       dataType: "json",
       success: function(data){
