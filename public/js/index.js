@@ -2,7 +2,7 @@ function getOnLoad() {
     $.ajax({
          url: "//api.walmartlabs.com/v1/trends",
          data: {apikey: 'gz84agu8t2bvg5whfc48zbtk'},
-         dataType: "json",
+         dataType: "jsonp",
          success: function(data){
             console.log("Back from server with the following results:")
          console.log("Status: " + status);
@@ -29,7 +29,7 @@ function getOnLoad() {
    $.ajax({
       url: "//api.walmartlabs.com/v1/trends?format=json&apiKey=gz84agu8t2bvg5whfc48zbtk",
       data: {apikey: 'gz84agu8t2bvg5whfc48zbtk', i: id},
-      dataType: "json",
+      dataType: "jsonp",
       success: function(data){
          console.log("Back from server with the following results:")
          console.log("Status getDetail: " + status);
