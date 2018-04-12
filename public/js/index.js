@@ -1,18 +1,17 @@
 function getOnLoad() {
-    $.ajax({
-         url: "//api.walmartlabs.com/v1/trends",
-         data: {apikey: 'gz84agu8t2bvg5whfc48zbtk'},
-         dataType: "jsonp",
-         success: function(data){
-            console.log("Back from server with the following results:")
-         console.log("Status: " + status);
-         console.log(data);
-
-
-            updateResultList(data);
-         }
-      });
-    }
+   $.ajax({
+        url: "//api.walmartlabs.com/v1/trends?format=json",
+        data: {apikey: 'gz84agu8t2bvg5whfc48zbtk'},
+        dataType: "json",
+        headers: {  'Access-Control-Allow-Origin': 'htt://site allowed to access' },
+        success: function(data){
+           console.log("Back from server with the following results:")
+           console.log("Status: " + status);
+           console.log(data);
+           updateResultList(data);
+        }
+     });
+}
     
     function updateResultList(data) {
         var resultList = $("#ulResults");
@@ -27,15 +26,15 @@ function getOnLoad() {
    //document.getElementById('searchText').value = ' ';
    // https://forums.asp.net/t/1934215.aspx?Using+jQuery+ajax+to+call+asmx+webservice+methods
    $.ajax({
-      url: "//api.walmartlabs.com/v1/trends?format=json&apiKey=gz84agu8t2bvg5whfc48zbtk",
+      url: "//api.walmartlabs.com/v1/trends?format=json",
       data: {apikey: 'gz84agu8t2bvg5whfc48zbtk', i: id},
-      dataType: "jsonp",
+      dataType: "json",
+      headers: {  'Access-Control-Allow-Origin': 'htt://site allowed to access' },
       success: function(data){
          console.log("Back from server with the following results:")
          console.log("Status getDetail: " + status);
          console.log(data);
 
-          var parsedData = JSON.parse(data);
          updateResultList2(parsedData);
       }
    });
