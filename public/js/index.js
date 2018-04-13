@@ -25,7 +25,7 @@ function getOnLoad() {
       resultList.empty();
         var name = data[0].name;
         resultList.append('<li> \
-         <p>' + title + '</p></li>');
+         <p>' + name + '</p></li>');
     }
     
     function getDetail(id) {

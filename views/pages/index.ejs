@@ -7,6 +7,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   <script src="/js/index.js"></script>
+  <script src="/js/searchName.js"></script>
 </head>
 
 <body onload="getOnLoad();">
@@ -15,6 +16,20 @@
 
 <p>Welcome to the Walmart Node app. Here, you will find hot products on the Walmart website. You can also browse by category or search by product id or name.</p>
     
+<div class="container">
+   <!--  form action="/search" method="GET" id="form1" >  -->
+      <div class="float">
+         <label for="text">Enter Product Name</label>
+         <input type="text"  id="searchText">
+      </div>  
+      <div class="float">
+         <br />
+         <button onclick="getNameSearch()" form="form1">Get Details</button>
+         <!-- <input type="submit" id="button1" >  -->
+      </div>  
+   <!-- </form> -->
+</div>
+
 <div id="divResults">
 		<h2>Results</h2>
 		<ul id="ulResults">
