@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   <script src="/js/index.js"></script>
   <script src="/js/searchName.js"></script>
+  <script src="/js/searchId.js"></script>
 </head>
 
 <body onload="getOnLoad();">
@@ -24,7 +25,22 @@
       </div>  
       <div class="float">
          <br />
-         <button onclick="getNameSearch()" form="form1">Get Details</button>
+         <button onclick="getNameSearch();" form="form1">Get Details</button>
+         <!-- <input type="submit" id="button1" >  -->
+      </div>  
+   <!-- </form> -->
+</div>
+    <br />
+    <br />
+<div class="container">
+   <!--  form action="/search" method="GET" id="form1" >  -->
+      <div class="float">
+         <label for="text">Enter Product ID</label>
+         <input type="text"  id="idText">
+      </div>  
+      <div class="float">
+         <br />
+         <button onclick="getIdSearch();" form="form1">Get Details</button>
          <!-- <input type="submit" id="button1" >  -->
       </div>  
    <!-- </form> -->

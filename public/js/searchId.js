@@ -1,12 +1,12 @@
-function getNameSearch() {
-   var searchTxt = $("#searchText").val();
+function getIdSearch() {
+   var searchTxt = $("#idText").val();
    console.log("You are searching for: " + searchTxt); 
    document.getElementById('searchText').value = ' ';
 
       // https://forums.asp.net/t/1934215.aspx?Using+jQuery+ajax+to+call+asmx+webservice+methods
       $.ajax({
-         url: "//api.walmartlabs.com/v1/search?format=json",
-         data: {apikey: 'gz84agu8t2bvg5whfc48zbtk', query: searchTxt},
+         url: "//api.walmartlabs.com/v1/items/" + searchTxt + "?",
+         data: {apikey: 'gz84agu8t2bvg5whfc48zbtk'},
          dataType: "json",
          headers: {  'Access-Control-Allow-Origin': '*' },
          success: function(data){
@@ -48,8 +48,8 @@ function getDetail(id) {
    //document.getElementById('searchText').value = ' ';
    // https://forums.asp.net/t/1934215.aspx?Using+jQuery+ajax+to+call+asmx+webservice+methods
    $.ajax({
-      url: "//api.walmartlabs.com/v1/search?format=json",
-      data: {apikey: 'gz84agu8t2bvg5whfc48zbtk', i: id},
+      url: "//api.walmartlabs.com/v1/items/" + searchTxt + "?",
+      data: {apikey: 'gz84agu8t2bvg5whfc48zbtk', searchTxt},
       dataType: "json",
       success: function(data){
          console.log("Back from server with the following results:")

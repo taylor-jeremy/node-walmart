@@ -3,7 +3,7 @@ function getOnLoad() {
         url: "//api.walmartlabs.com/v1/trends?format=json",
         data: {apikey: 'gz84agu8t2bvg5whfc48zbtk'},
         dataType: "json",
-        headers: {  'Access-Control-Allow-Origin': 'htt://site allowed to access' },
+        headers: {  'Access-Control-Allow-Origin': '*' },
         success: function(data){
            console.log("Back from server with the following results:")
            console.log("Status: " + status);
@@ -36,7 +36,7 @@ function getOnLoad() {
       url: "//api.walmartlabs.com/v1/trends?format=json",
       data: {apikey: 'gz84agu8t2bvg5whfc48zbtk', i: id},
       dataType: "json",
-      headers: {  'Access-Control-Allow-Origin': 'htt://site allowed to access' },
+      headers: {  'Access-Control-Allow-Origin': '*' },
       success: function(data){
          console.log("Back from server with the following results:")
          console.log("Status getDetail: " + status);
