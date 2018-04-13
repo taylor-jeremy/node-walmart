@@ -11,6 +11,13 @@ function getOnLoad() {
            updateResultList(data);
         }
      });
+    /*request(url, function (error, response, data) {
+        if (!error && response.statusCode = 200) {
+            //console.log(JSON.parse(body));
+            console.log(data);
+            updateResultList(data);
+        }
+    })*/
 }
     
     function updateResultList(data) {

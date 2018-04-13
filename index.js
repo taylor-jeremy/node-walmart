@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
-var url = require('url');
+//var url = require('url');
+var url = 'http://api.walmartlabs.com/v1/trends?format=json&apiKey=gz84agu8t2bvg5whfc48zbtk';
+var request = require('request');
 
 app.set('port', (process.env.PORT || 5000));
 
